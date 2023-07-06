@@ -3,21 +3,11 @@ import { FormEvent } from "react";
 import { useState } from "react";
 import Button from '@mui/material/Button'
 import TextField from '@mui/material/TextField';
-import * as crypto from "crypto-js";
+
 
 
 function Register (){
     const [mes,setMes] = useState("");          //To show message from API
-
-    const enc = (data:string,key:string)=>{
-        const encData = crypto.AES.encrypt(data,key).toString();
-        return encData;
-    }
-
-    const dec = (encData:string, key:string)=>{
-        const decData = crypto.AES.decrypt(encData,key);
-        return decData.toString(CryptoJS.enc.Utf8);
-    }
 
     const register = (e:FormEvent<HTMLFormElement>)=>{
         e.preventDefault();

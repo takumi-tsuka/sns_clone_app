@@ -1,9 +1,9 @@
 import {Outlet,Link} from "react-router-dom";
-
+import NavCompo from "../components/NavCompo";
 function Layout(){
     return(
         <>
-            <nav>
+            {/* <nav>
                 <ul>
                     <li>
                         <Link to="/home">Home</Link>
@@ -18,7 +18,8 @@ function Layout(){
                         <Link to="/posts">Posts</Link>
                     </li>
                 </ul>
-            </nav>
+            </nav> */}
+            <NavCompo/>
             <Outlet/>
         </>
     )
